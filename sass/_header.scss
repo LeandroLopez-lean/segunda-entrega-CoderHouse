@@ -1,0 +1,21 @@
+header {
+	margin: 0;
+	background-color: $background-color_2;
+	grid-area: header;
+  border-bottom: black 2px solid;
+
+.portada {
+	margin: 0;
+	width: 100%;
+	height: 300px;
+  border-bottom: black 2px solid;
+}
+h1 {
+	text-align: center;
+	color: $color_1;
+}
+.pheader {
+	text-align: center;
+}
+
+}

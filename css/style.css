@@ -1,3 +1,23 @@
+header {
+  margin: 0;
+  background-color: darkgray;
+  grid-area: header;
+  border-bottom: black 2px solid;
+}
+header .portada {
+  margin: 0;
+  width: 100%;
+  height: 300px;
+  border-bottom: black 2px solid;
+}
+header h1 {
+  text-align: center;
+  color: sienna;
+}
+header .pheader {
+  text-align: center;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -7,24 +27,6 @@ body {
   background-color: bisque;
   width: 100%;
   height: 100%;
-  align-content: f;
-}
-
-header {
-  margin: 0;
-  background-color: darkgray;
-  grid-area: header;
-}
-
-.portada {
-  margin: 0;
-  width: 100%;
-  height: 300px;
-}
-
-h1 {
-  text-align: center;
-  color: sienna;
 }
 
 .descripcion {
@@ -54,15 +56,18 @@ aside {
   margin: 2px;
   grid-area: segundo;
 }
+
 .tercero {
   width: auto;
   margin: 0px 10px 0px 0px;
   grid-area: tercero;
 }
-.pheader{
-  text-align: center;
 
+.pheader {
+  text-align: center;
+  text-decoration: underline black 2px;
 }
+
 .art {
   margin: 0;
   width: 200px;
@@ -71,37 +76,35 @@ aside {
   border: 1px black solid;
   grid-area: img;
 }
+.art:hover {
+  height: 225px;
+  transition-duration: 1s;
+}
 
 .foto {
   margin: 10px;
   border: 2px solid #444;
 }
 
-.art:hover {
-  height: 250px;
-  transition-duration: 1s;
-}
-
 footer {
   grid-area: footer;
-  /* width: 100%;
-  height: 200px; */
   margin: 0px;
   text-align: center;
   font-size: 30px;
   background-color: coral;
   color: aliceblue;
 }
-li{
+
+li {
   list-style-type: none;
 }
-a{
+
+a {
   text-decoration: none;
-  /*elimina el subrrallado*/
   text-transform: uppercase;
-  /*coloca en MAYUSCULA*/
 }
-.redes{
+
+.redes {
   height: 30px;
   text-align: center;
   text-transform: none;
@@ -109,100 +112,26 @@ a{
 
 .gridPadre {
   display: grid;
-  grid-template-columns: 300px 1fr  1fr 1fr;
+  grid-template-columns: 300px 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr;
-  grid-template-areas:
-    "header header header header"
-    "aside primero segundo tercero"
-    "aside primero segundo tercero"
-    "aside primero segundo tercero"
-    "footer footer footer footer";
+  grid-template-areas: "header header header header" "aside primero segundo tercero" "aside primero segundo tercero" "aside primero segundo tercero" "footer footer footer footer";
 }
 
-@media (max-width: 768px) {
+@media (max-width: 320px) {
   .gridPadre {
     margin: 0;
     display: grid;
-    grid-template-areas:
-      "header header"
-      "aside primero"
-      "aside primero"
-      "aside segundo"
-      "aside segundo"
-      "footer footer"
-    ;
+    grid-template-areas: "header header" "aside primero" "aside primero" "aside segundo" "aside segundo" "aside tercero" "aside tercero" "footer footer";
   }
 }
-
-@media (max-width: 600px) {
+@media (max-width: 520px) {
   .gridPadre {
     display: grid;
-    grid-template-areas:
-      "header"
-      "aside"
-      "primero"
-      "segundo"
-      "tercero"
-      "footer"
-    ;
+    grid-template-areas: "header" "aside" "primero" "segundo" "tercero" "footer";
   }
-
   aside {
     display: none;
   }
 }
 
-
-
-
-
-
-
-
-
-
-/* 
-@media (min-width: 800px) and (max-width: 1920px){
-   .primero{
-    max-width: 601px;
-   }
-   .segundo{
-    width: 600px;
-   }
-}
-@media (min-width: 600px) and (max-width: 1920px){
-  .primero{
-
-  }
-  .segundo{
-   width: 200px;
-  }
-}
- */
-/* .menu {
-  background-color: aliceblue;
-  height: 22px;
-  display: inline-block;
-  margin: 0px 50px;
-}
-
-h1 {
-  color: rgb(241, 7, 7);
-  text-align: center;
-  padding: 10px;
-  font-size: 50px;
-}
-
-a {
-  margin: 10px;
-  height: 100px;
-  text-decoration: none;
-  /*elimina el subrrallado*/
-/* text-transform: uppercase; */
-/*coloca en MAYUSCULA*/
-/* }
-
-li {
-  list-style-type: none;
-}
-*/
+/*# sourceMappingURL=style.css.map */
